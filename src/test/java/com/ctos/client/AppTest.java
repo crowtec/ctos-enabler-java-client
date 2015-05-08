@@ -1,4 +1,4 @@
-package com.ctos.xmlrpc.client;
+package com.ctos.client;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.ctos.xmlrpc</groupId>
+  <groupId>com.ctos.client</groupId>
   <artifactId>client</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
@@ -20,11 +20,11 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-<!-- 	<dependency> -->
-<!-- 	    <groupId>de.timroes</groupId> -->
-<!-- 	    <artifactId>aXMLRPC</artifactId> -->
-<!-- 	    <version>1.7.2</version> -->
-<!-- 	</dependency> -->
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>1.7.1</version>
+    </dependency>
 
   </dependencies>
   <name>CtosJavaClient</name>
