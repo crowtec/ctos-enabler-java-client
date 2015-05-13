@@ -43,19 +43,26 @@ public class CtosClient {
 //		System.out.println(client.query());
 
         Shape shape = new CircularShape(new Coordinate(10, 5), 7);
+		ArrayList<Coordinate> polygonalCoordinates = new ArrayList<Coordinate>();
+		polygonalCoordinates.add(new Coordinate(3.021, 5.214));
+		polygonalCoordinates.add(new Coordinate(3.54, 5.214));
+		polygonalCoordinates.add(new Coordinate(3.021, 8.214));
+
+		PolygonalShape polygonalShape = new PolygonalShape(polygonalCoordinates);
         DataInfo dataInfo = new DataInfo("ola ke ase");
-        Zone z = new Zone(null, null, null, null, null);
-		List<Zone> zones = client.getZones(z);
-		for (int i = 0; i < zones.size(); i++){
-			System.out.println(zones.get(i).getName());
-		}
-        CircularShape circularShape = ((CircularShape)zones.get(5).getShape());
-        Coordinate coordinate = circularShape.getCoordinate();
-        List<Zone> container = client.coordinateContainerZones(new Coordinate[]{coordinate});
-        System.out.println("CONTAINER");
-        for (int i = 0; i < container.size(); i++){
-            System.out.println(container.get(i).getName());
-        }
+        Zone z = new Zone("Polym", true, "zona", polygonalShape, dataInfo);
+		boolean zones = client.createZone(z);
+
+//		for (int i = 0; i < zones.size(); i++){
+//			System.out.println(zones.get(i).getName());
+//		}
+//        CircularShape circularShape = ((CircularShape)zones.get(5).getShape());
+//        Coordinate coordinate = circularShape.getCoordinate();
+//        List<Zone> container = client.coordinateContainerZones(new Coordinate[]{coordinate});
+//        System.out.println("CONTAINER");
+//        for (int i = 0; i < container.size(); i++){
+//            System.out.println(container.get(i).getName());
+//        }
 
         System.exit(0);
 
@@ -126,6 +133,27 @@ public class CtosClient {
 
         return zones;
     }
+
+	public boolean createZone(Zone zone){
+		JsonObject query = new JsonObject();
+		query.add("zone", zone.toJson());
+		JsonObject params = generateQuery(query);
+
+
+		HttpRequest request = new HttpRequest();
+		String response = request.postRequest(strToURL(getUrl() + "/zone/create"), params.toString());
+
+		System.out.println(response);
+//		JsonObject obj = new JsonParser().parse(response).getAsJsonObject();
+//		JsonArray zones_array = obj.getAsJsonObject("params").getAsJsonArray("zones");
+//		List<Zone> zones = new ArrayList<Zone>();
+//		for(int i = 0; i < zones_array.size(); i++){
+//			zones.add(Zone.fromJson(zones_array.get(i).getAsJsonObject()));
+//		}
+//
+//		return zones;
+		return true;
+	}
 
 
 
