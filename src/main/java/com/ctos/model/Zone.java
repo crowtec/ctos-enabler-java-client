@@ -1,5 +1,7 @@
 package com.ctos.model;
 
+import com.google.gson.JsonObject;
+
 public class Zone {
 
     private String name;
@@ -65,19 +67,34 @@ public class Zone {
         this.shape = shape;
     }
 
-    public String toJson(){
-        String json = "{";
-        json += (name != null) ? "\"name\":\"" + name + "\"," : "";
-        json += (isObject != null) ? "\"is_object\":" + isObject + "," : "";
-        json += (zoneClass != null) ? "\"zone_class\":\"" + zoneClass + "\"," : "";
-        json += (shape != null) ? "\"shape\":" + shape.toJson() + "," : "";
-        json += (dataInfo != null) ? "\"data_info\":" + dataInfo.toJson() : "";
-        if (json.endsWith(",")){
-            json = json.substring(0, json.length()-1);
+    public JsonObject toJson(){
+        JsonObject json = new JsonObject();
+        if (name != null){
+            json.addProperty("name", this.name);
         }
-        json += "}";
+        if (isObject != null){
+            json.addProperty("is_object", this.isObject);
+        }
+        if (zoneClass != null){
+            json.addProperty("zone_class", this.zoneClass);
+        }
+        if (shape != null){
+            json.add("shape", this.shape.toJson());
+        }
+        if (dataInfo != null){
+            json.add("data_info", this.dataInfo.toJson());
+        }
 
         return json;
+    }
+
+    public static Zone fromJson(JsonObject json){
+        //String name, Boolean isObject, String zoneClass, Shape shape, DataInfo dataInfo //
+        Zone zone = new Zone(json.get("name").getAsString(), json.get("is_object").getAsBoolean(), json.get("zone_class").getAsString()
+        , Shape.fromJson(json.get("shape").getAsJsonObject()), DataInfo.fromJson(json.get("data_info").getAsJsonObject()));
+
+        return zone;
+
     }
 
 

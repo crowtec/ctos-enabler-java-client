@@ -1,6 +1,12 @@
 package com.ctos.model;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 public class PolygonalShape extends Shape {
     private ArrayList<Coordinate> coordinates;
@@ -18,17 +24,28 @@ public class PolygonalShape extends Shape {
         this.coordinates = coordinates;
     }
 
-    public String toJson(){
-        String json = "{" +
-                "\"shape_class\":\"" + shapeClass + "\"," +
-                "\"coordinates\":[";
-        boolean first = true;
+    public JsonObject toJson(){
+        JsonObject json = new JsonObject();
+        json.addProperty("type", shapeClass);
+        JsonArray coordinates_array = new JsonArray();
         for(Coordinate coordinate: coordinates){
-            json += first ? coordinate.toJson() : "," + coordinate.toJson();
-            first = false;
+            coordinates_array.add(coordinate.toJson());
         }
-        json += "]}";
+        json.add("coordinates", coordinates_array);
 
         return json;
+    }
+
+
+    public static Shape fromJson(JsonObject jsonObject) {
+        JsonArray coordinates_array = jsonObject.getAsJsonArray("coordinates").get(0).getAsJsonArray();
+
+        ArrayList<Coordinate> coordinates = new ArrayList<Coordinate>();
+        for (int i = 0; i < coordinates_array.size(); i++){
+            coordinates.add(Coordinate.fromJson(coordinates_array.get(i).getAsJsonArray()));
+        }
+        PolygonalShape p = new PolygonalShape(coordinates);
+        p.shapeClass = jsonObject.get("type").getAsString();
+        return p;
     }
 }

@@ -1,5 +1,8 @@
 package com.ctos.model;
 
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+
 import java.util.ArrayList;
 
 public abstract class Shape {
@@ -17,5 +20,14 @@ public abstract class Shape {
         this.shapeClass = shapeClass;
     }
 
-    public abstract String toJson();
+    public abstract JsonObject toJson();
+    public static Shape fromJson(JsonObject jsonObject){
+        System.out.println(jsonObject.toString());
+        String type = jsonObject.get("type").getAsString();
+        switch(type){
+            case "polygon": return PolygonalShape.fromJson(jsonObject);
+            case "circle" : return CircularShape.fromJson(jsonObject);
+        }
+        return null;
+    }
 }
