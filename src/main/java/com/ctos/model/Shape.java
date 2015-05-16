@@ -24,9 +24,10 @@ public abstract class Shape {
     public static Shape fromJson(JsonObject jsonObject){
         System.out.println(jsonObject.toString());
         String type = jsonObject.get("type").getAsString();
-        switch(type){
-            case "polygon": return PolygonalShape.fromJson(jsonObject);
-            case "circle" : return CircularShape.fromJson(jsonObject);
+        if(type.equals("polygon")) {
+            return PolygonalShape.fromJson(jsonObject);
+        } else if (type.equals("circle")){
+            return CircularShape.fromJson(jsonObject);
         }
         return null;
     }

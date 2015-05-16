@@ -3,9 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.ctos.client</groupId>
-  <artifactId>client</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <artifactId>ctos-java-client</artifactId>
+  <version>0.0.1</version>
   <packaging>jar</packaging>
+
+
 
   <url>http://maven.apache.org</url>
 

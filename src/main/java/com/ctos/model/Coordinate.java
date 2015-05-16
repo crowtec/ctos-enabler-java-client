@@ -6,27 +6,27 @@ import com.google.gson.JsonPrimitive;
 
 public class Coordinate {
 
-    private double latitude;
-    private double longitude;
+    private float latitude;
+    private float longitude;
 
-    public Coordinate(double latitude, double longitude) {
+    public Coordinate(float latitude, float longitude) {
         this.latitude = latitude;
         this.longitude = longitude;
     }
 
-    public double getLatitude() {
+    public float getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(double latitude) {
+    public void setLatitude(float latitude) {
         this.latitude = latitude;
     }
 
-    public double getLongitude() {
+    public float getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(double longitude) {
+    public void setLongitude(float longitude) {
         this.longitude = longitude;
     }
 
@@ -38,6 +38,10 @@ public class Coordinate {
     }
 
     public static Coordinate fromJson(JsonArray jsonArray) {
-        return new Coordinate(jsonArray.get(0).getAsDouble(), jsonArray.get(1).getAsDouble());
+        return new Coordinate(jsonArray.get(0).getAsFloat(), jsonArray.get(1).getAsFloat());
+    }
+
+    public boolean equals(Coordinate coordinate){
+        return (this.latitude == coordinate.getLatitude() && this.longitude == coordinate.getLongitude());
     }
 }

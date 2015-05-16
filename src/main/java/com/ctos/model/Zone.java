@@ -62,6 +62,18 @@ public class Zone {
     public Shape getShape() {
         return shape;
     }
+    public CircularShape getShapeAsCircular() {
+        if (shape.getShapeClass().equals("circle")) {
+            return (CircularShape) shape;
+        }
+        return null;
+    }
+    public PolygonalShape getShapeAsPolygonal() {
+        if (shape.getShapeClass().equals("polygon")) {
+            return (PolygonalShape) shape;
+        }
+        return null;
+    }
 
     public void setShape(Shape shape) {
         this.shape = shape;

@@ -11,7 +11,7 @@ public class CircularShape extends Shape{
     private float radius;
 
     public CircularShape(Coordinate coordinate, float radius) {
-        super("circular");
+        super("circle");
         this.coordinate = coordinate;
         this.radius = radius;
     }

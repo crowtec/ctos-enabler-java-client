@@ -18,7 +18,7 @@ public class CtosClient {
 	private String userCode;
 	private String appCode;
 
-	private CtosClient(String url, String email, String userCode, String appCode){
+	public CtosClient(String url, String email, String userCode, String appCode){
 		this.url = url;
 		this.email = email;
 		this.userCode = userCode;
@@ -44,9 +44,9 @@ public class CtosClient {
 
         Shape shape = new CircularShape(new Coordinate(10, 5), 7);
 		ArrayList<Coordinate> polygonalCoordinates = new ArrayList<Coordinate>();
-		polygonalCoordinates.add(new Coordinate(3.021, 5.214));
-		polygonalCoordinates.add(new Coordinate(3.54, 5.214));
-		polygonalCoordinates.add(new Coordinate(3.021, 8.214));
+		polygonalCoordinates.add(new Coordinate(3.021f, 5.214f));
+		polygonalCoordinates.add(new Coordinate(3.54f, 5.214f));
+		polygonalCoordinates.add(new Coordinate(3.021f, 8.214f));
 
 		PolygonalShape polygonalShape = new PolygonalShape(polygonalCoordinates);
         DataInfo dataInfo = new DataInfo("ola ke ase");
