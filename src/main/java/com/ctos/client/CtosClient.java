@@ -82,18 +82,22 @@ public class CtosClient {
 		return  authentication;
 
 	}
-	public JsonObject generateQuery(JsonObject query){
+	public JsonObject generateQuery(JsonObject query, JsonObject stats){
 		JsonObject final_query = new JsonObject();
 		final_query.add("authentication", generateAuthentication());
+		if(stats != null){
+			final_query.add("stats", stats);
+		}
 		final_query.add("query", query);
 
 		return final_query;
 	}
 
-    public  List<Zone> getZones(Zone zone){
+
+    public  List<Zone> getZones(Zone zone, JsonObject stats){
 		JsonObject query = new JsonObject();
 		query.add("zone", zone.toJson());
-		JsonObject params = generateQuery(query);
+		JsonObject params = generateQuery(query, stats);
 
 		List<Zone> zones = new ArrayList<Zone>();
             HttpRequest request = new HttpRequest();
@@ -110,14 +114,15 @@ public class CtosClient {
 
     }
 
-    public List<Zone> coordinateContainerZones(Coordinate[] coordinates){
+    public List<Zone> coordinateContainerZones(Coordinate[] coordinates, JsonObject stats){
         JsonObject query = new JsonObject();
         JsonArray coordinates_array = new JsonArray();
         for(Coordinate coordinate: coordinates){
             coordinates_array.add(coordinate.toJson());
         }
+
         query.add("coordinates", coordinates_array);
-        JsonObject params = generateQuery(query);
+		JsonObject params = generateQuery(query, stats);
 
 
         HttpRequest request = new HttpRequest();
@@ -137,7 +142,7 @@ public class CtosClient {
 	public boolean createZone(Zone zone){
 		JsonObject query = new JsonObject();
 		query.add("zone", zone.toJson());
-		JsonObject params = generateQuery(query);
+		JsonObject params = generateQuery(query, null);
 
 
 		HttpRequest request = new HttpRequest();
