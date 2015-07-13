@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03760357-ba15-4876-bb9b-b14b026190e6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ctos/client/CtosClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/ctos/client/CtosClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ctos.client.AppTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ctos.client.AppTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/com.ctos.client.AppTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/com.ctos.client.AppTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ctos/model/Zone.java" afterPath="$PROJECT_DIR$/src/main/java/com/ctos/model/Zone.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="client.iws" />
@@ -42,17 +40,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="44" column="105" selection-start-line="44" selection-start-column="105" selection-end-line="44" selection-end-column="105" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#383#384#0" expanded="false" />
-                <element signature="e#414#415#0" expanded="false" />
-                <element signature="e#461#462#0" expanded="false" />
-                <element signature="e#501#502#0" expanded="false" />
-                <element signature="e#536#537#0" expanded="false" />
-                <element signature="e#568#569#0" expanded="false" />
-                <element signature="e#617#618#0" expanded="false" />
-                <element signature="e#659#660#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -62,15 +50,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#181#182#0" expanded="false" />
-                <element signature="e#213#214#0" expanded="false" />
-                <element signature="e#244#245#0" expanded="false" />
-                <element signature="e#271#272#0" expanded="false" />
-                <element signature="e#311#312#0" expanded="false" />
-                <element signature="e#343#344#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,34 +60,26 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#226#227#0" expanded="false" />
-                <element signature="e#270#271#0" expanded="false" />
-                <element signature="e#307#308#0" expanded="false" />
-                <element signature="e#340#341#0" expanded="false" />
-                <element signature="e#392#393#0" expanded="false" />
-                <element signature="e#436#437#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Zone.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ctos/model/Zone.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="71" column="49" selection-start-line="71" selection-start-column="49" selection-end-line="71" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CtosClient.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Zone.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ctos/model/Zone.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8315133">
+              <caret line="127" column="1" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CtosClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ctos/client/CtosClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30392158">
-              <caret line="117" column="44" selection-start-line="117" selection-start-column="44" selection-end-line="117" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="134" column="52" selection-start-line="134" selection-start-column="52" selection-end-line="134" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -145,10 +117,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ctos/model/PolygonalShape.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ctos/model/Shape.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ctos/model/Zone.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ctos/model/Coordinate.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ctos/model/CircularShape.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ctos/client/CtosClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ctos/model/Zone.java" />
       </list>
     </option>
   </component>
@@ -210,7 +182,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -305,7 +276,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -352,6 +322,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -937,17 +909,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="44" column="105" selection-start-line="44" selection-start-column="105" selection-end-line="44" selection-end-column="105" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#383#384#0" expanded="false" />
-            <element signature="e#414#415#0" expanded="false" />
-            <element signature="e#461#462#0" expanded="false" />
-            <element signature="e#501#502#0" expanded="false" />
-            <element signature="e#536#537#0" expanded="false" />
-            <element signature="e#568#569#0" expanded="false" />
-            <element signature="e#617#618#0" expanded="false" />
-            <element signature="e#659#660#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -955,15 +917,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#181#182#0" expanded="false" />
-            <element signature="e#213#214#0" expanded="false" />
-            <element signature="e#244#245#0" expanded="false" />
-            <element signature="e#271#272#0" expanded="false" />
-            <element signature="e#311#312#0" expanded="false" />
-            <element signature="e#343#344#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -971,22 +925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#226#227#0" expanded="false" />
-            <element signature="e#270#271#0" expanded="false" />
-            <element signature="e#307#308#0" expanded="false" />
-            <element signature="e#340#341#0" expanded="false" />
-            <element signature="e#392#393#0" expanded="false" />
-            <element signature="e#436#437#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctos/model/Zone.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="49" selection-start-line="71" selection-start-column="49" selection-end-line="71" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -1009,8 +947,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ctos/client/CtosClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30392158">
-          <caret line="117" column="44" selection-start-line="117" selection-start-column="44" selection-end-line="117" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="134" column="52" selection-start-line="134" selection-start-column="52" selection-end-line="134" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctos/model/Zone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8315133">
+          <caret line="127" column="1" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
           <folding />
         </state>
       </provider>

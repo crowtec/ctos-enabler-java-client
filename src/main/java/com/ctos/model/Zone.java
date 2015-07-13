@@ -109,5 +109,20 @@ public class Zone {
 
     }
 
+    public Coordinate getCentroid(){
+        if(this.getShapeAsCircular() != null){
+            return this.getShapeAsCircular().getCoordinate();
+        }else if(this.getShapeAsPolygonal() != null){
+            double centroidX = 0, centroidY = 0;
+
+            for(Coordinate c : this.getShapeAsPolygonal().getCoordinates()) {
+                centroidX += c.getLatitude();
+                centroidY += c.getLongitude();
+            }
+            return new Coordinate((float)centroidX / this.getShapeAsPolygonal().getCoordinates().size(), (float) centroidY / this.getShapeAsPolygonal().getCoordinates().size());
+        }
+        return null;
+    }
+
 
 }
